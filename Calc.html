@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculater Project</title>
+    <style>
+        .title{
+            margin-bottom: 10px;
+            text-align: center;
+            width: 210px;
+            color: blue;
+            border: solid black 2px;
+        }
+        input[type="button"]{
+            background-color: black;
+            color: white;
+            border: solid black 2px;
+            width: 100%;
+        }
+        input[type="text"]{
+            background-color: white;
+            border: solid black 2px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="title">Great Learning Calculator</div>
+<table border="0">
+    <tr>
+        <td colspan="3"><input type = "text" id = "result"></td>
+        <td><input type="button" value="c" onclick="clr()"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="1" onclick="display()"></td>
+        <td><input type="button" value="2" onclick="display()"></td>
+        <td><input type="button" value="3" onclick="display()"></td>
+        <td><input type="button" value="/" onclick="display()"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="display()"></td>
+        <td><input type="button" value="5" onclick="display()"></td>
+        <td><input type="button" value="6" onclick="display()"></td>
+        <td><input type="button" value="-" onclick="display()"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7" onclick="display()"></td>
+        <td><input type="button" value="8" onclick="display()"></td>
+        <td><input type="button" value="9" onclick="display()"></td>
+        <td><input type="button" value="+" onclick="display()"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="." onclick="display()"></td>
+        <td><input type="button" value="0" onclick="display()"></td>
+        <td><input type="button" value="=" onclick="equate()"></td>
+        <td><input type="button" value="*" onclick="display()"></td>
+    </tr>
+</table>
+<script tyep="text/javascript">
+    function clr(){
+        document.getElementById("result").value= "";
+    }
+    function display(){
+        document.getElementById("result").value+=val;
+    }
+    function equate(){
+        let x=document.getElementById("result").value;
+        let y=eval(x);
+        document.getElementById("result").value = y;
+    }
+</script>
+</body>
+</html>
